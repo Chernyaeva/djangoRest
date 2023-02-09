@@ -45,17 +45,3 @@ class NotesUser(AbstractBaseUser, PermissionsMixin):
     EMAIL_FIELD = "email"
     USERNAME_FIELD = "username"
     REQUIRED_FIELDS = ["email"]
-
-    # class Meta:
-    #        verbose_name = _("user")
-    #        verbose_name_plural = _("users")
-    #
-
-    # is_active = models.BooleanField(
-    #     _("active"),
-    #     default=True,
-    #     help_text=_(
-    #         "Designates whether this user should be treated as active. \
-    #         Unselect this instead of deleting accounts."
-    #     ))
-
