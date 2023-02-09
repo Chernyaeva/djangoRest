@@ -1,0 +1,10 @@
+from rest_framework.serializers import ModelSerializer
+
+from .models import NotesUser
+
+
+class NoteUserModelSerializer(ModelSerializer):
+
+    class Meta:
+        model = NotesUser
+        fields = ('username', 'first_name', 'last_name', 'birthday_year', 'email')
