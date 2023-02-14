@@ -3,9 +3,9 @@ from rest_framework.renderers import JSONRenderer
 from rest_framework.viewsets import ModelViewSet
 
 from .models import NotesUser
-from .serializers import NoteUserModelSerializer
+from .serializers import NotesUserModelSerializer
 
-class NoteUserModelViewSet(ModelViewSet):
+class NotesUserModelViewSet(ModelViewSet):
     queryset = NotesUser.objects.all()
-    serializer_class = NoteUserModelSerializer
+    serializer_class = NotesUserModelSerializer
 
