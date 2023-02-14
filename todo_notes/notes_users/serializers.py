@@ -3,7 +3,7 @@ from rest_framework.serializers import ModelSerializer
 from .models import NotesUser
 
 
-class NoteUserModelSerializer(ModelSerializer):
+class NotesUserModelSerializer(ModelSerializer):
 
     class Meta:
         model = NotesUser
