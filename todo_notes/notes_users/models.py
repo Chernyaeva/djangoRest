@@ -40,6 +40,9 @@ class NotesUser(AbstractBaseUser, PermissionsMixin):
         help_text=_("Designates whether the user can log into this admin site."),
     )
 
+    def __str__(self):
+        return f'{self.username}: {self.first_name} {self.last_name}'
+
     objects = UserManager()
 
     EMAIL_FIELD = "email"
