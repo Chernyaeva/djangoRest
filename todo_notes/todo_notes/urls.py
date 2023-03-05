@@ -18,6 +18,8 @@ from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from notes_users.views import NotesUserModelViewSet
 from todo_app.views import ProjectModelViewSet, TODOModelViewSet
+from rest_framework.authtoken import views
+
 
 router = DefaultRouter()
 router.register('notes_users', NotesUserModelViewSet)
@@ -28,4 +30,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),
     path('api/', include(router.urls)),
+    path('api-token-auth/', views.obtain_auth_token)
 ]
